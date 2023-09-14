@@ -12,6 +12,9 @@ A development of Shoppy E-commerce website using html, css, React, Bootstrap, Ex
 * Reduxjs
 
 
+### Preview here
+http://localhost:3000
+
 ### Features
 * Home page
 * About page
