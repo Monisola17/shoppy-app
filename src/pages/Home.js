@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import SpecialProduct from '../components/SpecialProduct';
 import BlogCard from '../components/BlogCard';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllProducts } from '../features/products/productSlice';
 
 const Home = () => {
+const productState = useSelector((state) => state.product.product);
+
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    getProducts();
+  })
+
+  const getProducts = () => {
+    dispatch(getAllProducts());
+  }
+
   return (
     <>
     <section className='home-wrapper-1 py-5'>
@@ -30,7 +44,8 @@ const Home = () => {
               <div className='small-banner position-relative '>
                 <img 
                   src='images/catbanner-01.jpg' 
-                  className='img-fluid rounded-3' 
+                  className='img-fluid rounded-3'
+                  itemProp='banner' 
                   alt='main banner' 
                 />
                 <div className='small-banner-content position-absolute'>
@@ -266,10 +281,26 @@ const Home = () => {
           </div>
         </div>
         <div className="row">
-          <SpecialProduct />
-          <SpecialProduct />
-          <SpecialProduct />
-          <SpecialProduct />
+          {
+            productState && productState?.map((item, index) =>{
+              if (item.tags  === "Special") {
+                return (
+                  <SpecialProduct  
+                    key ={index} 
+                    id ={item?._id}
+                    brand = {item?.brand}
+                    title = {item?.title}
+                    totalrating = {item?.totalrating.toString()}
+                    price = {item?.price}
+                    sold = {item?.sold}
+                    quantity = {item?.quantity}
+                    /> 
+                    )
+              }
+              
+            })
+          }
+          
         </div>
       </div>
     </section> 

@@ -53,7 +53,7 @@ const Header = () => {
                         </div>
                         <div>
                             <Link  to= '/wishlist'className='d-flex align-items-center gap-10 text-white'>
-                                <img src='/images/wishlist.svg' alt='wishlisht'/>
+                                <img src='/images/wishlist.svg' alt='wishlist'/>
                                 <p className='mb-0'> Favourite <br /> Wishlist </p>
                             </Link>
                         </div>
@@ -98,16 +98,16 @@ const Header = () => {
                                 </span> 
                             </button>
                             <ul className="dropdown-menu">
-                                <li><Link className="dropdown-item text-white" to="">Action</Link></li>
-                                <li><Link className="dropdown-item text-white" to="">Another action</Link></li>
-                                <li><Link className="dropdown-item text-white" to="">Something else here</Link></li>
+                                <li><Link className="dropdown-item text-white" to="">Phones</Link></li>
+                                <li><Link className="dropdown-item text-white" to="">Kitchen Appliances</Link></li>
+                                <li><Link className="dropdown-item text-white" to="">Laptops</Link></li>
                             </ul>
                         </div>
                         </div>
                         <div className='menu-links'>
                             <div className='d-flex align-items-center gap-15'>
                                 <NavLink to='/' >Home</NavLink>
-                                <NavLink to='/store'>Our Store</NavLink>
+                                <NavLink to='/product'>Our Store</NavLink>
                                 <NavLink to='/blogs'>Blogs</NavLink>
                                 <NavLink to='/contacts'>Contact</NavLink>
 

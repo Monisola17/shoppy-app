@@ -1,11 +1,22 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import productService from "./productService";
 
-export const getProducts = createAsyncThunk(
-  "product/get-products",
+export const getAllProducts = createAsyncThunk(
+  "product/get",
   async (thunkAPI) => {
     try {
       return await productService.getProducts();
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
+export const addToWishlist = createAsyncThunk(
+  "product/wishlist",
+  async (prodId, thunkAPI) => {
+    try {
+      return await productService.addToWishlist(prodId);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -16,36 +27,36 @@ export const getAProduct = createAsyncThunk(
   "product/get-product",
   async (id, thunkAPI) => {
     try {
-      return await productService.getProduct(id);
+      return await productService.getSingleProduct(id);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
   }
 );
 
-const initialState = {
-  products: [],
+const productState = {
+  product: "",
   isError: false,
   isLoading: false,
   isSuccess: false,
   message: "",
 };
 export const productSlice = createSlice({
-  name: "products",
-  initialState: initialState,
+  name: "product",
+  initialState: productState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getProducts.pending, (state) => {
+      .addCase(getAllProducts.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(getProducts.fulfilled, (state, action) => {
+      .addCase(getAllProducts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isError = false;
         state.isSuccess = true;
-        state.products = action.payload;
+        state.product = action.payload;
       })
-      .addCase(getProducts.rejected, (state, action) => {
+      .addCase(getAllProducts.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
@@ -58,14 +69,32 @@ export const productSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.isSuccess = true;
-        state.product = action.payload;
+        state.singleproduct = action.payload;
+        state.message = "Product Fetched Successfully"
       })
       .addCase(getAProduct.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;
-      });
+      })
+      .addCase(addToWishlist.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(addToWishlist.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.isSuccess = true;
+        state.addToWishlist = action.payload;
+        state.message = "Product Added to Wishlist"
+      })
+      .addCase(addToWishlist.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.isSuccess = false;
+        state.message = action.error;
+      })
+
   },
 });
 export default productSlice.reducer;
