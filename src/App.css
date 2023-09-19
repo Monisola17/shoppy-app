@@ -5,9 +5,9 @@
 }
 :root {
   --color-131921:#131921;
-  --color-3b4149:#3b4149;
-  --color-febd69:#febd69;
-  --color-232f3e:#232f3e;
+  --color-3b4149:#f2eddc;
+  --color-febd69:#ffd700;
+  --color-232f3e:#2e2e2e;
   --color-bf4800:#bf4800;
   --color-f5f5f7:#f5f5f7;
   --color-ededed:#ededed;
@@ -104,6 +104,38 @@ a {
   background-color: transparent;
   color: var(--color-febd69) !important;
 }
+
+/* Media queries for responsiveness */
+
+/* Small screens (e.g., mobile phones) */
+@media (max-width: 767px) {
+  .logo {
+    font-size: 20px;
+  }
+  
+  .nav {
+    flex-direction: column;
+  }
+  
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo {
+    font-size: 22px;
+  }
+  
+  /* Adjust other styles as needed */
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 992px) {
+  /* No specific changes for large screens in this example */
+}
 /*Header Part End Here*/
 
 /* Footer Part */
@@ -120,13 +152,35 @@ footer .input-group-text {
   padding: 8px 17px;
 }
 
+/* Define a media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Center-align text in the footer */
+  footer {
+    text-align: center;
+  }
+  
+  /* Remove borders on smaller screens */
+  footer:not(:first-child) {
+    border-top: none;
+  }
+
+  /* Adjust padding and font size for input group text */
+  footer .input-group-text {
+    padding: 8px 10px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+}
+
 /* Footer Part Ends Here */
 
 /* Home Page */
+/* Default styles */
 .main-banner-content {
   top: 15%;
   left: 5%;
+  cursor: pointer;
 }
+
 .main-banner-content h4 {
   font-size: 16px;
   font-weight: 400;
@@ -136,6 +190,7 @@ footer .input-group-text {
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
+
 .main-banner-content h5 {
   font-size: 42px;
   line-height: 54px;
@@ -143,16 +198,20 @@ footer .input-group-text {
   font-weight: 500;
   text-transform: none;
 }
+
 .main-banner-content p {
   font-size: 18px;
   line-height: 28px;
-  letter-spacing: 0.4;
+  letter-spacing: 0.4px;
   color: var(--color-131921);
 }
+
 .small-banner-content {
   top: 25%;
   left: 10%;
+  cursor: pointer;
 }
+
 .small-banner-content h4 {
   font-size: 14px;
   font-weight: 400;
@@ -162,6 +221,7 @@ footer .input-group-text {
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
+
 .small-banner-content h5 {
   font-size: 22px;
   line-height: 34px;
@@ -173,12 +233,75 @@ footer .input-group-text {
 .small-banner-content p {
   font-size: 14px;
   line-height: 22px;
-  letter-spacing: 0.4;
+  letter-spacing: 0.4px;
   color: var(--color-131921);
 }
+
 .small-banner {
   width: 49%;
 }
+/* Add a hover effect */
+.main-banner:hover .main-banner-content {
+  transform: translate(5%, 5%); /* Adjust the values for the desired movement */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .main-banner-content {
+    top: 10%;
+    left: 5%;
+  }
+
+  .main-banner-content h4 {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  .main-banner-content h5 {
+    font-size: 36px;
+    line-height: 46px;
+    margin: 0;
+  }
+
+  .main-banner-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .small-banner-content {
+    top: 20%;
+    left: 5%;
+  }
+
+  .small-banner-content h4 {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  .small-banner-content h5 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  .small-banner-content p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .small-banner {
+    width: 100%;
+  }
+}
+
+/* Add a hover effect */
+.small-banner:hover {
+  transform: scale(0.95); /* Reduce the scale for the hover effect */
+}
+
+
 
 /* Home wrapper 2 */
 .home-wrapper-2 {
@@ -322,33 +445,68 @@ footer .input-group-text {
 
 /* famous card */
 
+/* Default styles for larger screens */
 .famous-card .famous-content {
   top: 10%;
   left: 5%;
+  transition: transform 0.3s ease; /* Add a transition for the transform property */
 }
+
 .famous-card img {
   border-radius: 10px;
 }
+
 .famous-content h5 {
   font-size: 13px;
   line-height: 20px;
-  font-weight: 400px;
+  font-weight: 400;
   color: white;
   margin-bottom: 7px;
   text-transform: uppercase;
 }
+
 .famous-content h6 {
   font-size: 24px;
   line-height: 38px;
   font-weight: 500;
   color: white;
 }
+
 .famous-content p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 100;
   color: white;
 }
+
+/* Add a hover effect */
+.famous-card:hover .famous-content {
+  transform: translate(5%, 5%); /* Adjust the values for the desired movement */
+}
+
+/* Media query for screens smaller than 768px (tablets and mobile devices) */
+@media (max-width: 767px) {
+  .famous-card .famous-content {
+    top: 15%;
+    left: 10%;
+  }
+
+  .famous-content h5 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .famous-content h6 {
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .famous-content p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 /* famous card ends */
 
 /* Special Product */
@@ -569,7 +727,7 @@ footer .input-group-text {
 }
 .signup:hover {
   background-color: var(--color-131921);
-  color: white;
+  color: black;
 }
 /*  auth card  ends*/
 

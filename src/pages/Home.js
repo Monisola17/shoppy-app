@@ -24,75 +24,76 @@ const productState = useSelector((state) => state.product.product);
     <section className='home-wrapper-1 py-5'>
       <div className='container-xxl'>
         <div className='row'>
-          <div className='col-6'>
-            <div className='main-banner position-relative'>
-              <img 
-                src='images/main-banner-1.jpg' 
-                className='img-fluid rounded-3' 
-                alt='main banner' 
-              />
-              <div className='main-banner-content position-absolute'>
-                <h4>SUPERCHARGED FOR PROS.</h4>
-                <h5>iPad S13+ Pro.</h5>
-                <p>From $999.00 or $41.62/mo.</p>
-                <Link className="button">BUY NOW</Link>
-              </div>
-            </div>
-          </div>
-          <div className='col-6'>
-            <div className='d-flex flex-wrap gap-10 justify-content-between align-items-center'>
-              <div className='small-banner position-relative '>
-                <img 
-                  src='images/catbanner-01.jpg' 
-                  className='img-fluid rounded-3'
-                  itemProp='banner' 
-                  alt='main banner' 
-                />
-                <div className='small-banner-content position-absolute'>
-                  <h4>BEST SALE</h4>
-                  <h5>iPad S13+ Pro.</h5>
-                  <p>From $999.00 <br /> or $41.62/mo.</p>
-                </div>
-              </div>
-              <div className='small-banner position-relative '>
-                <img 
-                  src='images/catbanner-02.jpg' 
-                  className='img-fluid rounded-3' 
-                  alt='main banner' 
-                />
-                <div className='small-banner-content position-absolute'>
-                  <h4>NEW ARRIVAL</h4>
-                  <h5>Buy IPad Air</h5>
-                  <p>From $999.00 <br /> or $41.62/mo.</p>
-                </div>
-              </div>
-              <div className='small-banner position-relative '>
-                <img 
-                  src='images/catbanner-03.jpg' 
-                  className='img-fluid rounded-3' 
-                  alt='main banner' 
-                />
-                <div className='small-banner-content position-absolute'>
-                  <h4>BEST SALE</h4>
-                  <h5>iPad S13+ Pro.</h5>
-                  <p>From $999.00 <br /> or $41.62/mo.</p>
-                </div>
-              </div>
-              <div className='small-banner position-relative '>
-                <img 
-                  src='images/catbanner-04.jpg' 
-                  className='img-fluid rounded-3' 
-                  alt='main banner' 
-                />
-                <div className='small-banner-content position-absolute'>
-                  <h4>BEST SALE</h4>
-                  <h5>iPad S13+ Pro.</h5>
-                  <p>From $999.00 <br /> or $41.62/mo.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className='col-lg-6 col-md-12'>
+  <div className='main-banner position-relative'>
+    <img 
+      src='images/main-banner-1.jpg' 
+      className='img-fluid rounded-3' 
+      alt='main banner' 
+    />
+    <div className='main-banner-content position-absolute'>
+      <h4>SUPERCHARGED FOR PROS.</h4>
+      <h5>iPad S13+ Pro.</h5>
+      <p>From $999.00 or $41.62/mo.</p>
+      <Link className="button">BUY NOW</Link>
+    </div>
+  </div>
+</div>
+<div className='col-lg-6 col-md-12'>
+  <div className='d-md-flex flex-md-wrap gap-10 justify-content-between align-items-center'>
+    <div className='small-banner position-relative mb-3'>
+      <img 
+        src='images/catbanner-01.jpg' 
+        className='img-fluid rounded-3'
+        itemProp='banner' 
+        alt='main banner' 
+      />
+      <div className='small-banner-content position-absolute'>
+        <h4>BEST SALE</h4>
+        <h5>iPad S13+ Pro.</h5>
+        <p>From $999.00 <br /> or $41.62/mo.</p>
+      </div>
+    </div>
+    <div className='small-banner position-relative mb-3'>
+      <img 
+        src='images/catbanner-02.jpg' 
+        className='img-fluid rounded-3' 
+        alt='main banner' 
+      />
+      <div className='small-banner-content position-absolute'>
+        <h4>NEW ARRIVAL</h4>
+        <h5>Buy iPad Air</h5>
+        <p>From $999.00 <br /> or $41.62/mo.</p>
+      </div>
+    </div>
+    <div className='small-banner position-relative mb-3'>
+      <img 
+        src='images/catbanner-03.jpg' 
+        className='img-fluid rounded-3' 
+        alt='main banner' 
+      />
+      <div className='small-banner-content position-absolute'>
+        <h4>BEST SALE</h4>
+        <h5>iPad S13+ Pro.</h5>
+        <p>From $999.00 <br /> or $41.62/mo.</p>
+      </div>
+    </div>
+    <div className='small-banner position-relative mb-3'>
+      <img 
+        src='images/catbanner-04.jpg' 
+        className='img-fluid rounded-3' 
+        alt='main banner' 
+      />
+      <div className='small-banner-content position-absolute'>
+        <h4>BEST SALE</h4>
+        <h5>iPad S13+ Pro.</h5>
+        <p>From $999.00 <br /> or $41.62/mo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div> 
       </div>
     </section>
     <section className='home-wrapper-2 py-5'>
@@ -208,71 +209,54 @@ const productState = useSelector((state) => state.product.product);
 
     </section>   
     <section className="famous-wrapper py-5 home-wrapper-2">
-      <div className='container-xxl'>
-        <div className="row">
-          <div className="col-3">
-            <div className="famous-card position-relative">
-              <img
-                src="images/famous-1.webp"
-                className="img-fluid"
-                alt="famous"
-              />
-              <div className="famous-content position-absolute">
-                <h5>Big Screen</h5>
-                <h6>Smart Watch Series 7</h6>
-                <p>From $399or $16.62/mo. for 24 mo.*</p>
-              </div>
-            </div>
+  <div className="container-xxl">
+    <div className="row">
+      <div className="col-md-6 col-lg-3 mb-3">
+        <div className="famous-card position-relative">
+          <img src="images/famous-1.webp" className="img-fluid" alt="famous" />
+          <div className="famous-content position-absolute">
+            <h5>Big Screen</h5>
+            <h6>Smart Watch Series 7</h6>
+            <p>From $399 or $16.62/mo. for 24 mo.*</p>
           </div>
-          <div className="col-3">
-            <div className="famous-card position-relative">
-              <img
-                src="images/famous-2.webp"
-                className="img-fluid"
-                alt="famous"
-              />
-              <div className="famous-content position-absolute">
-                <h5 className="text-dark">Studio Display</h5>
-                <h6 className="text-dark">600 nits of brightness.</h6>
-                <p className="text-dark">27-inch 5K Retina display</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="famous-card position-relative">
-              <img
-                src="images/famous-3.webp"
-                className="img-fluid"
-                alt="famous"
-              />
-              <div className="famous-content position-absolute">
-                <h5 className="text-dark">smartphones</h5>
-                <h6 className="text-dark">Smartphone 13 Pro.</h6>
-                <p className="text-dark">
-                  Now in Green. From $999.00 or $41.62/mo. for 24 mo. Footnote*
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="famous-card position-relative">
-              <img
-                src="images/famous-4.webp"
-                className="img-fluid"
-                alt="famous"
-              />
-              <div className="famous-content position-absolute">
-                <h5 className="text-dark">home speakers</h5>
-                <h6 className="text-dark">Room-filling sound.</h6>
-                <p className="text-dark">
-                  From $699 or $116.58/mo. for 12 mo.*
-                </p>
-              </div>
-            </div>
-          </div>
-          </div>
+        </div>
       </div>
-    </section>
+      <div className="col-md-6 col-lg-3 mb-3">
+        <div className="famous-card position-relative">
+          <img src="images/famous-2.webp" className="img-fluid" alt="famous" />
+          <div className="famous-content position-absolute">
+            <h5 className="text-dark">Studio Display</h5>
+            <h6 className="text-dark">600 nits of brightness.</h6>
+            <p className="text-dark">27-inch 5K Retina display</p>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-6 col-lg-3 mb-3">
+        <div className="famous-card position-relative">
+          <img src="images/famous-3.webp" className="img-fluid" alt="famous" />
+          <div className="famous-content position-absolute">
+            <h5 className="text-dark">smartphones</h5>
+            <h6 className="text-dark">Smartphone 13 Pro.</h6>
+            <p className="text-dark">
+              Now in Green. From $999.00 or $41.62/mo. for 24 mo. Footnote*
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-6 col-lg-3 mb-3">
+        <div className="famous-card position-relative">
+          <img src="images/famous-4.webp" className="img-fluid" alt="famous" />
+          <div className="famous-content position-absolute">
+            <h5 className="text-dark">home speakers</h5>
+            <h6 className="text-dark">Room-filling sound.</h6>
+            <p className="text-dark">From $699 or $116.58/mo. for 12 mo.*</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     <section class1="special-wrapper py-5 home-wrapper-2">
       <div className='container-xxl'>
         <div className="row">
