@@ -31,3 +31,5 @@ http://localhost:3000
 ### Additional Info
 Alx Project cohort_9.
 
+### Preview Here
+![Screenshot 2023-09-22 222042](https://github.com/Monisola17/shoppy-app/assets/106781966/4e605927-dd6f-4595-b245-a09a77954e9d)
